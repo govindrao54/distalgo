@@ -1,113 +1,85 @@
 import sys
-import time
-import random
 config(channel is fifo, clock is lamport)
 
-DELAY = 0
+# calling all the request at once for all the processes
+# logs available for following two conditions
+# when some process releases a CS, 
+# ---- case a) 
+# --------- then all other processes remove ANY ONE tuple from their respective queue such that the c (the logical clock time passed in the arguments) matches with it
+# ---- case b) 
+# --------- then all other processes remove ALL tuples from their respective queue such that the c matches
 
 class P(process):
     def setup(s:set, nrequests:int):  # s is set of all other processes
         self.q = set()
-        self.req_clk_t = []
-        self.acks = []
-        self.nrequests = nrequests
+        self.clockList = []
 
-    def customTask():
-        #the task takes randomly 200 ms to 900 ms
-        if DELAY == 1:
-            t_random = random.randint(200,600)
-            time.sleep(t_random / 1000)
-        else:
-            t_random = 0
+    def task(c):
+        output('helper function - task *** corresponding to logical_clock -', c)
+        -- critical_section
+        output('in cs')
 
-        output('helper function - customTask - ', t_random, ' milliseconds')
 
-    def requestCS():
-        c = logical_clock()
-        output('logical_clock() - ' , logical_clock(), 'helper function - requestCS')
+    def requestCS(c):
+        output('helper function - requestCS')
+
+        -- request
         send(('request', c, self), to= s)
-        self.nrequests = self.nrequests - 1
-        # save for looping over later
-        self.req_clk_t.append(c)
-
         q.add(('request', c, self))
-        checkCS();
+
 
     def releaseCS(c):
-        output('logical_clock() - ' , logical_clock(), 'helper function - releaseCS')
-        #remove from queue
+        output('helper function - releaseCS')
+
+        -- release
         q.remove(('request', c, self))
-        #remove from local variable
-        self.req_clk_t.remove(c)
+        send(('release', logical_clock(), self), to= s)   
 
-        send(('release', c, self), to= s)
-        # checkCS()
 
-    def checkCS():
-        # -- critical_section
-        output('value of req_clk_t - ', self.req_clk_t)
-        output('setof o/p - ', setof((msg, sender), (msg, sender) in received));
-        for c in self.req_clk_t:
-            output('logical_clock() - ' , logical_clock(), 'helper function - checkCS', self.q)
-            if each(('request', c2, p) in q, has= (c2, p)==(c, self) or (c, self) < (c2, p)) and each(p in s, has= some(received(('ack', c2, _p)), has= c2 > c)):
-                output('Lamport Condition 05 SUCCESS for - ', self, c)
-                customTask()
-                releaseCS(c)
-                break
-            elif self.nrequests > 0:
-                # output('Lamport Condition 05 FAILED for - ', p)
-                # don't wait
-                await(True)
-                output('not waiting for CS')
-
-    def receive(msg= ('ack', c2, p)):
-        output('logical_clock() - ' , logical_clock(), 'ack event handler - called by', p)
-        # if all the acks are received, 
-        self.acks.append(('ack', c2, p))
-        # check if critical section can be allocated, i.e. ack was received by all the process
-        checkCS();
-
-    # this is like event handler - for message of the type 'request'
     def receive(msg= ('request', c2, p)):
-        output('logical_clock() - ' , logical_clock(), 'request event handler - called by', p)
+        output('handler function receive - request')
+
         q.add(('request', c2, p))
         send(('ack', logical_clock(), self), to= p)
-        
-        # check if critical section can be allocated
-        checkCS();
 
-    # this is like event handler - for message of the type 'release'
+
+    # some process pk released critical section
     def receive(msg= ('release', _, p)):
-        output('logical_clock() - ' , logical_clock(), 'release event handler - called by', p)
-        c = logical_clock()
+        output('handler function receive - release')
+        # so what every process does is, it checks for the all the tuples with same logical time
         for x in setof(('request', c, p), ('request', c, _p) in q):
-            output('DISCARDING - ', x)
             q.remove(x)
             break
-        
-        # check if critical section can be allocated
-        checkCS();
+
 
     def run():
-        output('logical_clock() - ' , logical_clock(), 'DELAY is ', 'ON' if DELAY else 'OFF')
-        # randomize the sending of request
+        output('helper function - run')
+
         for i in range(nrequests):
-            # randomly wait for anything between 1 to 5 seconds
-            if DELAY == 1:
-                t_random = random.randint(1,5)
-                output('logical_clock() - ' , logical_clock(), 'sleeping for ', t_random, ' seconds')
-                time.sleep(t_random)
-            requestCS()
+            c = logical_clock()
+            output('for loop request number - ', i, 'logical_clock - ', c)
+            self.clockList.append(c)
+            requestCS(c)
 
-        output('logical_clock() - ' , logical_clock(), 'value of q before exiting - ', q)
-        output('value of req_clk_t', self.req_clk_t)
+        for elem in self.clockList:
+            await(
+                # tuple is either self or the one with smallest timestamp
+                each(('request', c2, p) in q, has= (c2, p)==(elem, self) or (elem, self) < (c2, p)) 
+                and 
+                # each process has sent ack to p and timestamp of ack are more than the req timestamp
+                each(p in s, has= some(received(('ack', c2, _p)), has= c2 > elem))
+                )
+            # Lamport Condition 05 met, give access to critical section
+            task(elem)
+            releaseCS(elem)
 
-        # finally kill the process
         send(('done', self), to= parent())
         await(received(('done',), from_=parent()))
-        output('logical_clock() - ' , logical_clock(), 'terminating')
+        output('terminating')
 
 def main():
+    output('main function - *****************************************************************')
+
     nprocs = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     nrequests = int(sys.argv[2]) if len(sys.argv) > 2 else 1
 
@@ -117,4 +89,12 @@ def main():
     await(each(p in ps, has=received(('done', p))))
     send(('done',), to=ps)
 
+# This is an executable specification of the algorithm described in
+# Lamport, L. (1978). "Time, clocks, and the ordering of events in a
+# distributed system".  Communications of the ACM, 21(7):558-565.
 
+# This code includes setup and termination for serving a given number of
+# requests per process.
+
+# All labels are not needed,
+# leaving 14 or 15 lines total for the algorithm body and message handlers.
