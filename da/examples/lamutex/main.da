@@ -1,4 +1,6 @@
 import sys
+import random
+
 config(channel is fifo, clock is lamport)
 
 # calling all the request at once for all the processes
@@ -9,35 +11,49 @@ config(channel is fifo, clock is lamport)
 # ---- case b) 
 # --------- then all other processes remove ALL tuples from their respective queue such that the c matches
 
+class M(process):
+    def setup():  # s is set of all other processes
+        self.CRITICAL_BUSY = False
+        
+    def receive(msg= ('in cs', c2, p)):
+        output('receive: in cs')
+        if CRITICAL_BUSY == True:
+            output("SAFETY VIOLATED - ", p)
+        else:
+            CRITICAL_BUSY = True;
+
+    def receive(msg= ('out cs', c2, p)):                                            
+        output('receive: out cs')
+        CRITICAL_BUSY = False;
+
+
 class P(process):
     def setup(s:set, nrequests:int):  # s is set of all other processes
         self.q = set()
         self.clockList = []
 
     def task(c):
-        output('helper function - task *** corresponding to logical_clock -', c)
+        # output('helper function - task')
         -- critical_section
-        output('in cs')
+        output('in cs', self)
 
 
     def requestCS(c):
-        output('helper function - requestCS')
-
+        # output('helper function - requestCS')
         -- request
         send(('request', c, self), to= s)
         q.add(('request', c, self))
 
 
     def releaseCS(c):
-        output('helper function - releaseCS')
-
+        # output('helper function - releaseCS')
         -- release
         q.remove(('request', c, self))
         send(('release', logical_clock(), self), to= s)   
 
 
     def receive(msg= ('request', c2, p)):
-        output('handler function receive - request')
+        output('handler function receive - request', p)
 
         q.add(('request', c2, p))
         send(('ack', logical_clock(), self), to= p)
@@ -45,7 +61,7 @@ class P(process):
 
     # some process pk released critical section
     def receive(msg= ('release', _, p)):
-        output('handler function receive - release')
+        output('handler function receive - release', p)
         # so what every process does is, it checks for the all the tuples with same logical time
         for x in setof(('request', c, p), ('request', c, _p) in q):
             q.remove(x)
@@ -53,11 +69,11 @@ class P(process):
 
 
     def run():
-        output('helper function - run')
+        # output('helper function - run')
 
         for i in range(nrequests):
             c = logical_clock()
-            output('for loop request number - ', i, 'logical_clock - ', c)
+            # output('for loop request number - ', i, 'logical_clock - ', c)
             self.clockList.append(c)
             requestCS(c)
 
@@ -78,23 +94,80 @@ class P(process):
         output('terminating')
 
 def main():
-    output('main function - *****************************************************************')
+    output('main function - *************** << python -m da main.da p r n d a part >> *****************')
+    # Your main program must be named
+    # "main.da", and must run with a command like the following, where 
+    # "p" is for number of processes, 
+    # "r" is for total number of requests, 
+    # "n" is for number of runs for correctness testing, and 
+    # "d" and "a" are for number of parameter values and number of repetitions, respectively, for performance testing:
+    # python.exe -m da main.da p r n d a
 
     nprocs = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     nrequests = int(sys.argv[2]) if len(sys.argv) > 2 else 1
 
-    ps = new(P, num=nprocs)
-    for p in ps: setup(p, (ps-{p}, nrequests))
-    start(ps)
-    await(each(p in ps, has=received(('done', p))))
-    send(('done',), to=ps)
+    nn = int(sys.argv[3]) if len(sys.argv) > 3 else 1
+    nd = int(sys.argv[4]) if len(sys.argv) > 4 else 1
+    na = int(sys.argv[5]) if len(sys.argv) > 5 else 1
+    part = int(sys.argv[6]) if len(sys.argv) > 6 else 1
 
-# This is an executable specification of the algorithm described in
-# Lamport, L. (1978). "Time, clocks, and the ordering of events in a
-# distributed system".  Communications of the ACM, 21(7):558-565.
+    spacing = int(nrequests / nd )
 
-# This code includes setup and termination for serving a given number of
-# requests per process.
+    output('PART SELECTED - ', part)
 
-# All labels are not needed,
-# leaving 14 or 15 lines total for the algorithm body and message handlers.
+    if part == 1:
+    
+        # selecting random number of requests
+        curr_nrequests = random.randint(1,nrequests)
+        # selecting random number of processes
+        curr_nprocs = random.randint(1,nprocs)
+
+        output('number of processes - ', curr_nprocs, 'number of requests - ', curr_nrequests)
+        
+        # loop for correctness testing
+        for k in range(1,nn+1):
+            output('CORRECTNESS TESTING COUNT - ', k, 'of', nn)
+            # setup individual processes
+            ps = new(P, num=curr_nprocs)
+            for p in ps: setup(p, (ps-{p}, curr_nprocs))
+            # start process ps
+            start(ps)
+            
+            # wait for sometime else just go to next iteration
+            if await(each(p in ps, has=received(('done', p)))):
+                output('CORRECTNESS RESULT - NO DEADLOCK')
+            elif timeout(1):
+                output('CORRECTNESS RESULT - DEADLOCK OCCURRED!')
+
+            # terminate process ps
+            send(('done',), to=ps)
+
+    elif part == 2:
+
+        # loop for fixed repetitions
+        for l in range(1,na+1):
+            output('REPETITION NO - ', l, 'of',na)
+            # loop for even spacing
+            for i in [j for j in range(1, nrequests+1) if j % spacing == 0]:
+                output('REQUEST COUNT - ', i, ' total - ', nrequests)
+                # loop for correctness testing
+                for k in range(1,nn+1):
+                    output('CORRECTNESS TESTING COUNT - ', k, 'of', nn)
+                    # setup individual processes
+                    ps = new(P, num=i)
+                    for p in ps: setup(p, (ps-{p}, i))
+                    # start process ps
+                    start(ps)
+                    
+                    # wait for sometime else just go to next iteration
+                    if await(each(p in ps, has=received(('done', p)))):
+                        output('CORRECTNESS RESULT - NO DEADLOCK')
+                    elif timeout(1):
+                        output('CORRECTNESS RESULT - DEADLOCK OCCURRED, LIVENESS VIOLATED')
+
+                    # terminate process ps
+                    send(('done',), to=ps)
+
+
+    output('The End')
+    # main process terminates
