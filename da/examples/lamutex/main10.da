@@ -1,68 +1,66 @@
 import sys
 config(channel is fifo, clock is lamport)
 
+#simple separation of the mutex algo
+
 class P(process):
     def setup(s:set, nrequests:int):  # s is set of all other processes
         self.q = set()
 
-    def mutex(task):
+    def task():
+        output('helper function - task')
+        -- critical_section
+        output('in cs')
+
+    def requestCS():
+        output('helper function - requestCS')
+
         -- request
         c = logical_clock()
         send(('request', c, self), to= s)
         q.add(('request', c, self))
-        await(each(('request', c2, p) in q,
-                   has= (c2, p)==(c, self) or (c, self) < (c2, p)) and
-              each(p in s, has= some(received(('ack', c2, _p)), has= c2 > c)))
-        -- critical_section
+        await(
+            # tuple is either self or the one with smallest timestamp
+            each(('request', c2, p) in q, has= (c2, p)==(c, self) or (c, self) < (c2, p)) 
+            and 
+            # each process has sent ack to p and timestamp of ack are more than the req timestamp
+            each(p in s, has= some(received(('ack', c2, _p)), has= c2 > c))
+            )
         task()
+        releaseCS(c)
+
+    def releaseCS(c):
+        output('helper function - releaseCS')
+
         -- release
         q.remove(('request', c, self))
-        send(('release', logical_clock(), self), to= s)
+        send(('release', logical_clock(), self), to= s)   
 
     def receive(msg= ('request', c2, p)):
+        output('handler function receive - request')
+
         q.add(('request', c2, p))
         send(('ack', logical_clock(), self), to= p)
 
     def receive(msg= ('release', _, p)):
-#        q.remove(('request', _, p))  # pattern matching needed for _
-#        q.remove(anyof(setof(('request', c, p), ('request', c, _p) in q)))
+        output('handler function receive - release')
+
         for x in setof(('request', c, p), ('request', c, _p) in q):
             q.remove(x)
             break
-#        for ('request', c, _p) in q: q.remove('request', c, p); break
-#        for (tag, c, p2) in q:
-#            if tag == 'request' and p2 == p:
-#                q.remove((tag, c, p2)); break
 
     def run():
-        def task():
-            output('in cs')
+        output('helper function - run')
+
         for i in range(nrequests):
-            mutex(task)
+            requestCS()
 
         send(('done', self), to= parent())
         await(received(('done',), from_=parent()))
         output('terminating')
 
 def main():
-
-    # S1 = {(1,2,3,4),(2,7,3,9),(12,7,81,0)}
-    # p = 3
-
-    # output('value of 1 - ', setof(w, (w,7,_p,_) in S1))
-
-    # S2 = {(1,2,3,4),(2,7,3,9),(12,7,81)}
-    # output('value of 2 - ', setof(x[0], x in S2, len(x) == 3 and x[1] == 7 and x[2] == 3))
-
-    # S3 = {(1,2,3,4),(2,7,3,9),(12,7,81)}
-    # p = 81
-    # output('value of 3 - ', setof(w, (w,7,_p,_) in S3))
-
-
-    S4 = {({3,6,9},{4,8,12},{5,10,15}),({3,6,19},{4,8,112},{5,10,115}),({3,16,9},{4,18,12},{5,110,15})}
-    p = 112
-    output('value of 4 - ', setof(y[2], x in S4, y in x, x[0] == 3))
-
+    output('main function - *****************************************************************')
 
     nprocs = int(sys.argv[1]) if len(sys.argv) > 1 else 10
     nrequests = int(sys.argv[2]) if len(sys.argv) > 2 else 1

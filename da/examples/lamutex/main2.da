@@ -73,7 +73,7 @@ class P(process):
         # so what every process does is, it checks for the all the tuples with same logical time
         for x in setof(('request', c, p), ('request', c, _p) in q):
             q.remove(x)
-            break
+            # break
 
 
     def run():

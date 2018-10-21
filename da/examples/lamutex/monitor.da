@@ -1,0 +1,16 @@
+class M(d, a):
+	self.d = d
+	self.a = a
+
+	# to track if CS is taken
+	self.cstaken = False
+
+	self.map = {}
+
+	def checkSafetyCondition():
+	 	return self.cstaken
+
+	def checkCorrectness(n,p):
+		# check if all processes that requested CS received CS
+
+	

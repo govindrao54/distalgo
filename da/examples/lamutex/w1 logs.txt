@@ -1,0 +1,1039 @@
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:10:17]
+→ python -m da -m da.examples.lamutex.main 2 2
+[67] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=46866, TcpTransport=32649).
+[67] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[67] da.api<MainProcess>:INFO: Running iteration 1 ...
+[68] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[70] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[124] da.examples.lamutex.main.P<P:b6003>:OUTPUT: helper function - run
+[124] da.examples.lamutex.main.P<P:b6002>:OUTPUT: helper function - run
+[124] da.examples.lamutex.main.P<P:b6002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[124] da.examples.lamutex.main.P<P:b6003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[124] da.examples.lamutex.main.P<P:b6003>:OUTPUT: helper function - requestCS
+[124] da.examples.lamutex.main.P<P:b6002>:OUTPUT: helper function - requestCS
+[127] da.examples.lamutex.main.P<P:b6002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[127] da.examples.lamutex.main.P<P:b6003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[127] da.examples.lamutex.main.P<P:b6002>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:b6003>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:b6002>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:b6003>:OUTPUT: handler function receive - request
+[131] da.examples.lamutex.main.P<P:b6002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[131] da.examples.lamutex.main.P<P:b6003>:OUTPUT: handler function receive - request
+[132] da.examples.lamutex.main.P<P:b6002>:OUTPUT: handler function receive - request
+[132] da.examples.lamutex.main.P<P:b6002>:OUTPUT: in cs
+[132] da.examples.lamutex.main.P<P:b6002>:OUTPUT: helper function - releaseCS
+[133] da.examples.lamutex.main.P<P:b6003>:OUTPUT: handler function receive - release
+[133] da.examples.lamutex.main.P<P:b6003>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[134] da.examples.lamutex.main.P<P:b6003>:OUTPUT: in cs
+[134] da.examples.lamutex.main.P<P:b6003>:OUTPUT: helper function - releaseCS
+[134] da.examples.lamutex.main.P<P:b6002>:OUTPUT: handler function receive - release
+
+
+
+^C[53137] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:24]
+→ python -m da -m da.examples.lamutex.main 2 2
+[74] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=33048, TcpTransport=28860).
+[74] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[74] da.api<MainProcess>:INFO: Running iteration 1 ...
+[75] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[76] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[127] da.examples.lamutex.main.P<P:cd402>:OUTPUT: helper function - run
+[127] da.examples.lamutex.main.P<P:cd403>:OUTPUT: helper function - run
+[127] da.examples.lamutex.main.P<P:cd402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[127] da.examples.lamutex.main.P<P:cd403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[127] da.examples.lamutex.main.P<P:cd402>:OUTPUT: helper function - requestCS
+[127] da.examples.lamutex.main.P<P:cd403>:OUTPUT: helper function - requestCS
+[129] da.examples.lamutex.main.P<P:cd403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[130] da.examples.lamutex.main.P<P:cd403>:OUTPUT: helper function - requestCS
+[130] da.examples.lamutex.main.P<P:cd402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[130] da.examples.lamutex.main.P<P:cd402>:OUTPUT: helper function - requestCS
+[131] da.examples.lamutex.main.P<P:cd402>:OUTPUT: handler function receive - request
+[132] da.examples.lamutex.main.P<P:cd403>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:cd402>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:cd403>:OUTPUT: handler function receive - request
+[135] da.examples.lamutex.main.P<P:cd402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[135] da.examples.lamutex.main.P<P:cd402>:OUTPUT: in cs
+[135] da.examples.lamutex.main.P<P:cd402>:OUTPUT: helper function - releaseCS
+[136] da.examples.lamutex.main.P<P:cd403>:OUTPUT: handler function receive - release
+[136] da.examples.lamutex.main.P<P:cd403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[136] da.examples.lamutex.main.P<P:cd403>:OUTPUT: in cs
+[136] da.examples.lamutex.main.P<P:cd403>:OUTPUT: helper function - releaseCS
+[137] da.examples.lamutex.main.P<P:cd402>:OUTPUT: handler function receive - release
+^C[1213] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:26]
+→ python -m da -m da.examples.lamutex.main 2 2
+[66] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=19959, TcpTransport=51275).
+[67] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[67] da.api<MainProcess>:INFO: Running iteration 1 ...
+[68] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[69] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[122] da.examples.lamutex.main.P<P:75403>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:75402>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:75403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:75402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:75403>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:75402>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:75402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:75402>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:75403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:75403>:OUTPUT: helper function - requestCS
+[126] da.examples.lamutex.main.P<P:75402>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:75403>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:75403>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:75402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[129] da.examples.lamutex.main.P<P:75402>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:75402>:OUTPUT: in cs
+[130] da.examples.lamutex.main.P<P:75402>:OUTPUT: helper function - releaseCS
+[130] da.examples.lamutex.main.P<P:75403>:OUTPUT: handler function receive - release
+^C[1060] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:27]
+→ python -m da -m da.examples.lamutex.main 2 2
+[68] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=38287, TcpTransport=10416).
+[68] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[68] da.api<MainProcess>:INFO: Running iteration 1 ...
+[69] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[70] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[119] da.examples.lamutex.main.P<P:f6402>:OUTPUT: helper function - run
+[119] da.examples.lamutex.main.P<P:f6403>:OUTPUT: helper function - run
+[120] da.examples.lamutex.main.P<P:f6402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[120] da.examples.lamutex.main.P<P:f6403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[120] da.examples.lamutex.main.P<P:f6402>:OUTPUT: helper function - requestCS
+[120] da.examples.lamutex.main.P<P:f6403>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:f6403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[121] da.examples.lamutex.main.P<P:f6403>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:f6402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[122] da.examples.lamutex.main.P<P:f6402>:OUTPUT: helper function - requestCS
+[122] da.examples.lamutex.main.P<P:f6402>:OUTPUT: handler function receive - request
+[122] da.examples.lamutex.main.P<P:f6403>:OUTPUT: handler function receive - request
+[123] da.examples.lamutex.main.P<P:f6402>:OUTPUT: handler function receive - request
+[123] da.examples.lamutex.main.P<P:f6403>:OUTPUT: handler function receive - request
+[124] da.examples.lamutex.main.P<P:f6402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[124] da.examples.lamutex.main.P<P:f6402>:OUTPUT: in cs
+[124] da.examples.lamutex.main.P<P:f6402>:OUTPUT: helper function - releaseCS
+[125] da.examples.lamutex.main.P<P:f6403>:OUTPUT: handler function receive - release
+^C[1096] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:30]
+→ python -m da -m da.examples.lamutex.main 2 2
+[75] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=58391, TcpTransport=22917).
+[75] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[76] da.api<MainProcess>:INFO: Running iteration 1 ...
+[78] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[79] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[135] da.examples.lamutex.main.P<P:df402>:OUTPUT: helper function - run
+[135] da.examples.lamutex.main.P<P:df402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[135] da.examples.lamutex.main.P<P:df403>:OUTPUT: helper function - run
+[135] da.examples.lamutex.main.P<P:df402>:OUTPUT: helper function - requestCS
+[135] da.examples.lamutex.main.P<P:df403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[135] da.examples.lamutex.main.P<P:df403>:OUTPUT: helper function - requestCS
+[137] da.examples.lamutex.main.P<P:df403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[137] da.examples.lamutex.main.P<P:df402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[137] da.examples.lamutex.main.P<P:df403>:OUTPUT: helper function - requestCS
+[137] da.examples.lamutex.main.P<P:df402>:OUTPUT: helper function - requestCS
+[138] da.examples.lamutex.main.P<P:df403>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:df402>:OUTPUT: handler function receive - request
+[139] da.examples.lamutex.main.P<P:df403>:OUTPUT: handler function receive - request
+[140] da.examples.lamutex.main.P<P:df402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[140] da.examples.lamutex.main.P<P:df402>:OUTPUT: handler function receive - request
+[140] da.examples.lamutex.main.P<P:df402>:OUTPUT: in cs
+[141] da.examples.lamutex.main.P<P:df402>:OUTPUT: helper function - releaseCS
+[143] da.examples.lamutex.main.P<P:df403>:OUTPUT: handler function receive - release
+^C[1131] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:33]
+→ python -m da -m da.examples.lamutex.main 2 2
+[69] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=54893, TcpTransport=41101).
+[69] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[69] da.api<MainProcess>:INFO: Running iteration 1 ...
+[70] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[71] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[123] da.examples.lamutex.main.P<P:b7002>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:b7003>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:b7003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:b7002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:b7003>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:b7002>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:b7003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:b7003>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:b7002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:b7002>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:b7002>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:b7003>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:b7002>:OUTPUT: handler function receive - request
+[127] da.examples.lamutex.main.P<P:b7003>:OUTPUT: handler function receive - request
+[127] da.examples.lamutex.main.P<P:b7002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[127] da.examples.lamutex.main.P<P:b7002>:OUTPUT: in cs
+[128] da.examples.lamutex.main.P<P:b7002>:OUTPUT: helper function - releaseCS
+[128] da.examples.lamutex.main.P<P:b7003>:OUTPUT: handler function receive - release
+[128] da.examples.lamutex.main.P<P:b7003>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[129] da.examples.lamutex.main.P<P:b7003>:OUTPUT: in cs
+[129] da.examples.lamutex.main.P<P:b7003>:OUTPUT: helper function - releaseCS
+[129] da.examples.lamutex.main.P<P:b7002>:OUTPUT: handler function receive - release
+^C[1665] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:36]
+→ python -m da -m da.examples.lamutex.main 2 2
+[68] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=39663, TcpTransport=55546).
+[68] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[69] da.api<MainProcess>:INFO: Running iteration 1 ...
+[69] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[70] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[121] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: helper function - run
+[121] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: helper function - run
+[121] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[121] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[122] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: helper function - requestCS
+[122] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[123] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[124] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: helper function - requestCS
+[124] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: handler function receive - request
+[124] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: handler function receive - request
+[125] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[126] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: in cs
+[126] da.examples.lamutex.main.P<P:f3c02>:OUTPUT: helper function - releaseCS
+[127] da.examples.lamutex.main.P<P:f3c03>:OUTPUT: handler function receive - release
+^C[1218] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:38]
+→ python -m da -m da.examples.lamutex.main 2 2
+[68] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=52601, TcpTransport=11248).
+[68] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[69] da.api<MainProcess>:INFO: Running iteration 1 ...
+[70] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[71] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[125] da.examples.lamutex.main.P<P:08402>:OUTPUT: helper function - run
+[125] da.examples.lamutex.main.P<P:08403>:OUTPUT: helper function - run
+[125] da.examples.lamutex.main.P<P:08402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[125] da.examples.lamutex.main.P<P:08402>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:08403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[126] da.examples.lamutex.main.P<P:08403>:OUTPUT: helper function - requestCS
+[127] da.examples.lamutex.main.P<P:08402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[127] da.examples.lamutex.main.P<P:08403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[127] da.examples.lamutex.main.P<P:08403>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:08402>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:08402>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:08403>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:08403>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:08402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[129] da.examples.lamutex.main.P<P:08402>:OUTPUT: in cs
+[130] da.examples.lamutex.main.P<P:08402>:OUTPUT: helper function - releaseCS
+[130] da.examples.lamutex.main.P<P:08402>:OUTPUT: handler function receive - request
+[130] da.examples.lamutex.main.P<P:08403>:OUTPUT: handler function receive - release
+^C[1581] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:45]
+→ python -m da -m da.examples.lamutex.main 2 2
+[77] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=27477, TcpTransport=12227).
+[77] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[77] da.api<MainProcess>:INFO: Running iteration 1 ...
+[78] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[80] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[131] da.examples.lamutex.main.P<P:f7802>:OUTPUT: helper function - run
+[132] da.examples.lamutex.main.P<P:f7802>:OUTPUT: for loop request number -  0 logical_clock -  0
+[131] da.examples.lamutex.main.P<P:f7803>:OUTPUT: helper function - run
+[132] da.examples.lamutex.main.P<P:f7802>:OUTPUT: helper function - requestCS
+[132] da.examples.lamutex.main.P<P:f7803>:OUTPUT: for loop request number -  0 logical_clock -  0
+[132] da.examples.lamutex.main.P<P:f7803>:OUTPUT: helper function - requestCS
+[134] da.examples.lamutex.main.P<P:f7803>:OUTPUT: for loop request number -  1 logical_clock -  1
+[134] da.examples.lamutex.main.P<P:f7802>:OUTPUT: for loop request number -  1 logical_clock -  1
+[134] da.examples.lamutex.main.P<P:f7802>:OUTPUT: helper function - requestCS
+[134] da.examples.lamutex.main.P<P:f7803>:OUTPUT: helper function - requestCS
+[136] da.examples.lamutex.main.P<P:f7803>:OUTPUT: handler function receive - request
+[136] da.examples.lamutex.main.P<P:f7802>:OUTPUT: handler function receive - request
+[137] da.examples.lamutex.main.P<P:f7803>:OUTPUT: handler function receive - request
+[137] da.examples.lamutex.main.P<P:f7802>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[138] da.examples.lamutex.main.P<P:f7802>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:f7802>:OUTPUT: in cs
+[138] da.examples.lamutex.main.P<P:f7802>:OUTPUT: helper function - releaseCS
+[139] da.examples.lamutex.main.P<P:f7803>:OUTPUT: handler function receive - release
+[140] da.examples.lamutex.main.P<P:f7803>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[140] da.examples.lamutex.main.P<P:f7803>:OUTPUT: in cs
+[140] da.examples.lamutex.main.P<P:f7803>:OUTPUT: helper function - releaseCS
+[141] da.examples.lamutex.main.P<P:f7802>:OUTPUT: handler function receive - release
+^C[1887] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:48]
+→ python -m da -m da.examples.lamutex.main 2 2
+[66] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=26447, TcpTransport=31278).
+[67] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[67] da.api<MainProcess>:INFO: Running iteration 1 ...
+[67] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[69] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[123] da.examples.lamutex.main.P<P:ac002>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:ac003>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:ac003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:ac002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:ac003>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:ac002>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:ac003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:ac002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:ac003>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:ac002>:OUTPUT: helper function - requestCS
+[126] da.examples.lamutex.main.P<P:ac003>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:ac002>:OUTPUT: handler function receive - request
+[127] da.examples.lamutex.main.P<P:ac003>:OUTPUT: handler function receive - request
+[127] da.examples.lamutex.main.P<P:ac002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[127] da.examples.lamutex.main.P<P:ac002>:OUTPUT: in cs
+[128] da.examples.lamutex.main.P<P:ac002>:OUTPUT: helper function - releaseCS
+[128] da.examples.lamutex.main.P<P:ac002>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:ac003>:OUTPUT: handler function receive - release
+^C[1472] da.api<MainProcess>:WARNING: Received keyboard interrupt.
+Terminating node....
+Node terminated. Goodbye!
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:50]
+→ python -m da -m da.examples.lamutex.main 2 2
+[61] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=42740, TcpTransport=17761).
+[62] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[62] da.api<MainProcess>:INFO: Running iteration 1 ...
+[62] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[64] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[121] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - run
+[121] da.examples.lamutex.main.P<P:bac02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[121] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - run
+[121] da.examples.lamutex.main.P<P:bac03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[121] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:bac03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[123] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:bac02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[123] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - requestCS
+[124] da.examples.lamutex.main.P<P:bac02>:OUTPUT: handler function receive - request
+[124] da.examples.lamutex.main.P<P:bac03>:OUTPUT: handler function receive - request
+[125] da.examples.lamutex.main.P<P:bac02>:OUTPUT: handler function receive - request
+[125] da.examples.lamutex.main.P<P:bac03>:OUTPUT: handler function receive - request
+[126] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[126] da.examples.lamutex.main.P<P:bac02>:OUTPUT: in cs
+[126] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - releaseCS
+[127] da.examples.lamutex.main.P<P:bac03>:OUTPUT: handler function receive - release
+[127] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[127] da.examples.lamutex.main.P<P:bac03>:OUTPUT: in cs
+[127] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - releaseCS
+[128] da.examples.lamutex.main.P<P:bac02>:OUTPUT: handler function receive - release
+[128] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[128] da.examples.lamutex.main.P<P:bac02>:OUTPUT: in cs
+[128] da.examples.lamutex.main.P<P:bac02>:OUTPUT: helper function - releaseCS
+[129] da.examples.lamutex.main.P<P:bac03>:OUTPUT: handler function receive - release
+[129] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[129] da.examples.lamutex.main.P<P:bac03>:OUTPUT: in cs
+[129] da.examples.lamutex.main.P<P:bac03>:OUTPUT: helper function - releaseCS
+[130] da.examples.lamutex.main.P<P:bac02>:OUTPUT: handler function receive - release
+[131] da.examples.lamutex.main.P<P:bac02>:OUTPUT: terminating
+[131] da.api<MainProcess>:INFO: Main process terminated.
+[131] da.examples.lamutex.main.P<P:bac03>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:11:52]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:17]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:17]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:17]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:17]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:17]
+→ === after removing break in receive condition ====
+zsh: == not found
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:32]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:35]
+→
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:35]
+→ python -m da -m da.examples.lamutex.main 2 2
+/Users/govind/work/distalgo/da/examples/lamutex/main.da compiled with 0 errors and 0 warnings.
+[110] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=55117, TcpTransport=22807).
+[111] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[111] da.api<MainProcess>:INFO: Running iteration 1 ...
+[111] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[113] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[168] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - run
+[168] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - run
+[168] da.examples.lamutex.main.P<P:82402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[168] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - requestCS
+[168] da.examples.lamutex.main.P<P:82403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[168] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - requestCS
+[170] da.examples.lamutex.main.P<P:82402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[170] da.examples.lamutex.main.P<P:82403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[170] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - requestCS
+[170] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - requestCS
+[171] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - request
+[171] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - request
+[172] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[172] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - request
+[173] da.examples.lamutex.main.P<P:82402>:OUTPUT: in cs
+[173] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - releaseCS
+[174] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - request
+[174] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[174] da.examples.lamutex.main.P<P:82403>:OUTPUT: in cs
+[174] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - releaseCS
+[175] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - release
+[175] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[176] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[176] da.examples.lamutex.main.P<P:82403>:OUTPUT: in cs
+[176] da.examples.lamutex.main.P<P:82402>:OUTPUT: in cs
+[176] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - releaseCS
+[176] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - releaseCS
+[177] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - release
+[177] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - release
+[179] da.examples.lamutex.main.P<P:82403>:OUTPUT: terminating
+[179] da.examples.lamutex.main.P<P:82402>:OUTPUT: terminating
+[179] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:38]
+→ python -m da -m da.examples.lamutex.main 2 2
+[62] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=40216, TcpTransport=56920).
+[62] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[62] da.api<MainProcess>:INFO: Running iteration 1 ...
+[63] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[64] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[118] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - run
+[118] da.examples.lamutex.main.P<P:a1402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[119] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - requestCS
+[118] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - run
+[119] da.examples.lamutex.main.P<P:a1403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[119] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:a1403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[121] da.examples.lamutex.main.P<P:a1402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[121] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:a1403>:OUTPUT: handler function receive - request
+[121] da.examples.lamutex.main.P<P:a1402>:OUTPUT: handler function receive - request
+[123] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[123] da.examples.lamutex.main.P<P:a1403>:OUTPUT: handler function receive - request
+[124] da.examples.lamutex.main.P<P:a1402>:OUTPUT: handler function receive - request
+[125] da.examples.lamutex.main.P<P:a1402>:OUTPUT: in cs
+[125] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - releaseCS
+[126] da.examples.lamutex.main.P<P:a1403>:OUTPUT: handler function receive - release
+[126] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[126] da.examples.lamutex.main.P<P:a1403>:OUTPUT: in cs
+[126] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - releaseCS
+[127] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[127] da.examples.lamutex.main.P<P:a1403>:OUTPUT: in cs
+[127] da.examples.lamutex.main.P<P:a1403>:OUTPUT: helper function - releaseCS
+[127] da.examples.lamutex.main.P<P:a1402>:OUTPUT: handler function receive - release
+[127] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[127] da.examples.lamutex.main.P<P:a1402>:OUTPUT: in cs
+[127] da.examples.lamutex.main.P<P:a1402>:OUTPUT: helper function - releaseCS
+[128] da.examples.lamutex.main.P<P:a1403>:OUTPUT: handler function receive - release
+[128] da.examples.lamutex.main.P<P:a1402>:OUTPUT: handler function receive - release
+[129] da.examples.lamutex.main.P<P:a1402>:OUTPUT: terminating
+[129] da.examples.lamutex.main.P<P:a1403>:OUTPUT: terminating
+[129] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:40]
+→ python -m da -m da.examples.lamutex.main 2 2
+[62] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=27722, TcpTransport=32560).
+[62] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[62] da.api<MainProcess>:INFO: Running iteration 1 ...
+[63] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[65] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[118] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - run
+[118] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - run
+[118] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[118] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[118] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - requestCS
+[118] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - requestCS
+[121] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[121] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[121] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - requestCS
+[122] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - requestCS
+[122] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: handler function receive - request
+[122] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: handler function receive - request
+[123] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: handler function receive - request
+[123] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[123] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: in cs
+[124] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - releaseCS
+[124] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: handler function receive - request
+[125] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: handler function receive - release
+[125] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[125] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: in cs
+[125] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - releaseCS
+[126] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[126] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: in cs
+[126] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: helper function - releaseCS
+[126] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: handler function receive - release
+[126] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[126] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: in cs
+[126] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: helper function - releaseCS
+[127] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: handler function receive - release
+[128] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: handler function receive - release
+[128] da.examples.lamutex.main.P<P:c4c03>:OUTPUT: terminating
+[129] da.api<MainProcess>:INFO: Main process terminated.
+[129] da.examples.lamutex.main.P<P:c4c02>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:42]
+→ python -m da -m da.examples.lamutex.main 2 2
+[67] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=23809, TcpTransport=47502).
+[67] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[67] da.api<MainProcess>:INFO: Running iteration 1 ...
+[68] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[71] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[128] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - run
+[128] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - run
+[128] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[128] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[128] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - requestCS
+[130] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[130] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - requestCS
+[130] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[131] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - requestCS
+[131] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: handler function receive - request
+[131] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[133] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: in cs
+[133] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - releaseCS
+[134] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: handler function receive - release
+[134] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[134] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: in cs
+[134] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - releaseCS
+[135] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[135] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: handler function receive - release
+[135] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: helper function - releaseCS
+[142] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[142] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: helper function - releaseCS
+[143] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: handler function receive - release
+[143] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: handler function receive - release
+[144] da.examples.lamutex.main.P<P:2ec03>:OUTPUT: terminating
+[144] da.examples.lamutex.main.P<P:2ec02>:OUTPUT: terminating
+[144] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:43]
+→ python -m da -m da.examples.lamutex.main 2 2
+[66] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=22643, TcpTransport=33705).
+[66] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[66] da.api<MainProcess>:INFO: Running iteration 1 ...
+[67] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[68] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[126] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - run
+[126] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - run
+[126] da.examples.lamutex.main.P<P:58403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[126] da.examples.lamutex.main.P<P:58402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[126] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - requestCS
+[126] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:58402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[128] da.examples.lamutex.main.P<P:58403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[128] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - requestCS
+[129] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - requestCS
+[129] da.examples.lamutex.main.P<P:58402>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:58403>:OUTPUT: handler function receive - request
+[130] da.examples.lamutex.main.P<P:58403>:OUTPUT: handler function receive - request
+[130] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[131] da.examples.lamutex.main.P<P:58402>:OUTPUT: in cs
+[131] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - releaseCS
+[132] da.examples.lamutex.main.P<P:58402>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:58403>:OUTPUT: handler function receive - release
+[133] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[133] da.examples.lamutex.main.P<P:58403>:OUTPUT: in cs
+[133] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - releaseCS
+[133] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[134] da.examples.lamutex.main.P<P:58403>:OUTPUT: in cs
+[134] da.examples.lamutex.main.P<P:58402>:OUTPUT: handler function receive - release
+[134] da.examples.lamutex.main.P<P:58403>:OUTPUT: helper function - releaseCS
+[134] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[134] da.examples.lamutex.main.P<P:58402>:OUTPUT: in cs
+[134] da.examples.lamutex.main.P<P:58402>:OUTPUT: helper function - releaseCS
+[135] da.examples.lamutex.main.P<P:58402>:OUTPUT: handler function receive - release
+[135] da.examples.l[136] da.examples.lamutex.main.P<P:58402>:OUTPUT: terminating
+amutex.main.P<P:58403>:OUTPUT: handler function receive - release
+[136] da.api<MainProcess>:INFO: Main process terminated.
+[142] da.examples.lamutex.main.P<P:58403>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:45]
+→ python -m da -m da.examples.lamutex.main 2 2
+[73] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=52245, TcpTransport=53517).
+[73] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[73] da.api<MainProcess>:INFO: Running iteration 1 ...
+[74] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[75] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[130] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - run
+[130] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - run
+[130] da.examples.lamutex.main.P<P:82402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[130] da.examples.lamutex.main.P<P:82403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[130] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - requestCS
+[130] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - requestCS
+[132] da.examples.lamutex.main.P<P:82402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[132] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - requestCS
+[132] da.examples.lamutex.main.P<P:82403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[132] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - requestCS
+[133] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - request
+[135] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[135] da.examples.lamutex.main.P<P:82402>:OUTPUT: in cs
+[135] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - releaseCS
+[136] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - release
+[136] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[136] da.examples.lamutex.main.P<P:82403>:OUTPUT: in cs
+[136] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - releaseCS
+[137] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[137] da.examples.lamutex.main.P<P:82403>:OUTPUT: in cs
+[137] da.examples.lamutex.main.P<P:82403>:OUTPUT: helper function - releaseCS
+[137] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - release
+[137] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[137] da.examples.lamutex.main.P<P:82402>:OUTPUT: in cs
+[137] da.examples.lamutex.main.P<P:82402>:OUTPUT: helper function - releaseCS
+[138] da.examples.lamutex.main.P<P:82403>:OUTPUT: handler function receive - release
+[139] da.examples.lamutex.main.P<P:82402>:OUTPUT: handler function receive - release
+[140] da.examples.lamutex.main.P<P:82403>:OUTPUT: terminating
+[140] da.examples.lamutex.main.P<P:82402>:OUTPUT: terminating
+[140] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:49]
+→ python -m da -m da.examples.lamutex.main 2 2
+[61] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=25152, TcpTransport=56279).
+[61] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[61] da.api<MainProcess>:INFO: Running iteration 1 ...
+[64] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[65] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[112] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - run
+[112] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - run
+[112] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[112] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[112] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - requestCS
+[112] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - requestCS
+[115] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[115] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - requestCS
+[115] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[116] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - requestCS
+[117] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: handler function receive - request
+[118] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: handler function receive - request
+[118] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: handler function receive - request
+[119] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[119] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: handler function receive - request
+[120] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: in cs
+[120] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - releaseCS
+[121] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: handler function receive - release
+[121] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[121] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: in cs
+[121] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - releaseCS
+[122] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[122] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: in cs
+[122] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: helper function - releaseCS
+[122] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: handler function receive - release
+[122] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[122] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: in cs
+[123] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: helper function - releaseCS
+[123] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: handler function receive - release
+[123] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: handler function receive - release
+[124] da.examples.lamutex.main.P<P:7fc02>:OUTPUT: terminating
+[124] da.api<MainProcess>:INFO: Main process terminated.
+[125] da.examples.lamutex.main.P<P:7fc03>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:50]
+→ python -m da -m da.examples.lamutex.main 2 2
+[87] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=19748, TcpTransport=52389).
+[87] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[87] da.api<MainProcess>:INFO: Running iteration 1 ...
+[88] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[90] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[145] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - run
+[145] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - run
+[145] da.examples.lamutex.main.P<P:53c02>:OUTPUT: for loop request number -  0 logical_clock -  0
+[145] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - requestCS
+[145] da.examples.lamutex.main.P<P:53c03>:OUTPUT: for loop request number -  0 logical_clock -  0
+[145] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - requestCS
+[147] da.examples.lamutex.main.P<P:53c03>:OUTPUT: for loop request number -  1 logical_clock -  1
+[147] da.examples.lamutex.main.P<P:53c02>:OUTPUT: for loop request number -  1 logical_clock -  1
+[147] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - requestCS
+[147] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - requestCS
+[148] da.examples.lamutex.main.P<P:53c02>:OUTPUT: handler function receive - request
+[148] da.examples.lamutex.main.P<P:53c03>:OUTPUT: handler function receive - request
+[149] da.examples.lamutex.main.P<P:53c02>:OUTPUT: handler function receive - request
+[149] da.examples.lamutex.main.P<P:53c03>:OUTPUT: handler function receive - request
+[150] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[150] da.examples.lamutex.main.P<P:53c02>:OUTPUT: in cs
+[150] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - releaseCS
+[152] da.examples.lamutex.main.P<P:53c03>:OUTPUT: handler function receive - release
+[152] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[152] da.examples.lamutex.main.P<P:53c03>:OUTPUT: in cs
+[153] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - releaseCS
+[154] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[154] da.examples.lamutex.main.P<P:53c03>:OUTPUT: in cs
+[154] da.examples.lamutex.main.P<P:53c03>:OUTPUT: helper function - releaseCS
+[154] da.examples.lamutex.main.P<P:53c02>:OUTPUT: handler function receive - release
+[155] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[155] da.examples.lamutex.main.P<P:53c02>:OUTPUT: in cs
+[155] da.examples.lamutex.main.P<P:53c02>:OUTPUT: helper function - releaseCS
+[157] da.examples.lamutex.main.P<P:53c03>:OUTPUT: handler function receive - release
+[157] da.examples.lamutex.main.P<P:53c02>:OUTPUT: handler function receive - release
+[158] da.examples.lamutex.main.P<P:53c03>:OUTPUT: terminating
+[158] da.api<MainProcess>:INFO: Main process terminated.
+[158] da.examples.lamutex.main.P<P:53c02>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:52]
+→ python -m da -m da.examples.lamutex.main 2 2
+[65] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=17294, TcpTransport=20492).
+[65] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[66] da.api<MainProcess>:INFO: Running iteration 1 ...
+[67] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[68] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[122] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:06002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - run
+[123] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - requestCS
+[123] da.examples.lamutex.main.P<P:06003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[123] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:06003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:06002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[125] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - requestCS
+[125] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - requestCS
+[127] da.examples.lamutex.main.P<P:06002>:OUTPUT: handler function receive - request
+[127] da.examples.lamutex.main.P<P:06003>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:06002>:OUTPUT: handler function receive - request
+[128] da.examples.lamutex.main.P<P:06003>:OUTPUT: handler function receive - request
+[129] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[129] da.examples.lamutex.main.P<P:06002>:OUTPUT: in cs
+[129] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - releaseCS
+[130] da.examples.lamutex.main.P<P:06003>:OUTPUT: handler function receive - release
+[130] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[130] da.examples.lamutex.main.P<P:06003>:OUTPUT: in cs
+[130] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - releaseCS
+[131] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[131] da.examples.lamutex.main.P<P:06003>:OUTPUT: in cs
+[131] da.examples.lamutex.main.P<P:06003>:OUTPUT: helper function - releaseCS
+[131] da.examples.lamutex.main.P<P:06002>:OUTPUT: handler function receive - release
+[131] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[132] da.examples.lamutex.main.P<P:06002>:OUTPUT: in cs
+[132] da.examples.lamutex.main.P<P:06002>:OUTPUT: helper function - releaseCS
+[132] da.examples.lamutex.main.P<P:06002>:OUTPUT: handler function receive - release
+[133] da.examples.lamutex.main.P<P:06003>:OUTPUT: handler function receive - release
+[134] da.examples.lamutex.main.P<P:06002>:OUTPUT: terminating
+[134] da.examples.lamutex.main.P<P:06003>:OUTPUT: terminating
+[134] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:58]
+→ python -m da -m da.examples.lamutex.main 2 2
+[71] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=21391, TcpTransport=22236).
+[71] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[72] da.api<MainProcess>:INFO: Running iteration 1 ...
+[74] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[76] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[135] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - run
+[135] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - run
+[135] da.examples.lamutex.main.P<P:23002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[135] da.examples.lamutex.main.P<P:23003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[135] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - requestCS
+[135] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - requestCS
+[136] da.examples.lamutex.main.P<P:23003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[137] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - requestCS
+[137] da.examples.lamutex.main.P<P:23002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[137] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - requestCS
+[137] da.examples.lamutex.main.P<P:23002>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:23003>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:23002>:OUTPUT: handler function receive - request
+[139] da.examples.lamutex.main.P<P:23003>:OUTPUT: handler function receive - request
+[139] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[139] da.examples.lamutex.main.P<P:23002>:OUTPUT: in cs
+[140] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - releaseCS
+[140] da.examples.lamutex.main.P<P:23003>:OUTPUT: handler function receive - release
+[141] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[141] da.examples.lamutex.main.P<P:23003>:OUTPUT: in cs
+[141] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - releaseCS
+[141] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[141] da.examples.lamutex.main.P<P:23003>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:23003>:OUTPUT: helper function - releaseCS
+[142] da.examples.lamutex.main.P<P:23002>:OUTPUT: handler function receive - release
+[142] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[142] da.examples.lamutex.main.P<P:23002>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:23002>:OUTPUT: helper function - releaseCS
+[143] da.examples.lamutex.main.P<P:23003>:OUTPUT: handler function receive - release
+[143] da.examples.lamutex.main.P<P:23002>:OUTPUT: handler function receive - release
+[144] da.examples.lamutex.main.P<P:23003>:OUTPUT: terminating
+[144] da.examples.lamutex.main.P<P:23002>:OUTPUT: terminating
+[144] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:15:59]
+→ === increasing processes and requests ===
+zsh: == not found
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:16:31]
+→ python -m da -m da.examples.lamutex.main 2 3
+[68] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=12806, TcpTransport=12239).
+[68] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[68] da.api<MainProcess>:INFO: Running iteration 1 ...
+[69] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[70] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[125] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - run
+[126] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - run
+[126] da.examples.lamutex.main.P<P:9f003>:OUTPUT: for loop request number -  0 logical_clock -  0
+[126] da.examples.lamutex.main.P<P:9f002>:OUTPUT: for loop request number -  0 logical_clock -  0
+[126] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - requestCS
+[126] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - requestCS
+[129] da.examples.lamutex.main.P<P:9f002>:OUTPUT: for loop request number -  1 logical_clock -  1
+[129] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - requestCS
+[129] da.examples.lamutex.main.P<P:9f003>:OUTPUT: for loop request number -  1 logical_clock -  1
+[129] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - requestCS
+[130] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - request
+[130] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - request
+[130] da.examples.lamutex.main.P<P:9f002>:OUTPUT: for loop request number -  2 logical_clock -  4
+[130] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - requestCS
+[131] da.examples.lamutex.main.P<P:9f003>:OUTPUT: for loop request number -  2 logical_clock -  4
+[131] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - requestCS
+[132] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - request
+[132] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - request
+[132] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - request
+[133] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[133] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:9f002>:OUTPUT: in cs
+[134] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - releaseCS
+[134] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - release
+[135] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[135] da.examples.lamutex.main.P<P:9f003>:OUTPUT: in cs
+[135] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - releaseCS
+[135] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[136] da.examples.lamutex.main.P<P:9f003>:OUTPUT: in cs
+[136] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - releaseCS
+[136] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - release
+[136] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[136] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - task *** corresponding to logical_clock - 4
+[136] da.examples.lamutex.main.P<P:9f003>:OUTPUT: in cs
+[136] da.examples.lamutex.main.P<P:9f003>:OUTPUT: helper function - releaseCS
+[136] da.examples.lamutex.main.P<P:9f002>:OUTPUT: in cs
+[136] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - releaseCS
+[137] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - release
+[137] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - task *** corresponding to logical_clock - 4
+[137] da.examples.lamutex.main.P<P:9f002>:OUTPUT: in cs
+[137] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - release
+[137] da.examples.lamutex.main.P<P:9f002>:OUTPUT: helper function - releaseCS
+[138] da.examples.lamutex.main.P<P:9f003>:OUTPUT: handler function receive - release
+[138] da.examples.lamutex.main.P<P:9f002>:OUTPUT: handler function receive - release
+[139] da.examples.lamutex.main.P<P:9f003>:OUTPUT: terminating
+[139] da.api<MainProcess>:INFO: Main process terminated.
+[140] da.examples.lamutex.main.P<P:9f002>:OUTPUT: terminating
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:16:37]
+→ python -m da -m da.examples.lamutex.main 2 4
+[75] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=36482, TcpTransport=31934).
+[75] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[75] da.api<MainProcess>:INFO: Running iteration 1 ...
+[76] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[78] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[127] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - run
+[127] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - run
+[128] da.examples.lamutex.main.P<P:54403>:OUTPUT: for loop request number -  0 logical_clock -  0
+[128] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - requestCS
+[128] da.examples.lamutex.main.P<P:54402>:OUTPUT: for loop request number -  0 logical_clock -  0
+[128] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - requestCS
+[131] da.examples.lamutex.main.P<P:54402>:OUTPUT: for loop request number -  1 logical_clock -  1
+[131] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - requestCS
+[131] da.examples.lamutex.main.P<P:54403>:OUTPUT: for loop request number -  1 logical_clock -  1
+[132] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - requestCS
+[133] da.examples.lamutex.main.P<P:54402>:OUTPUT: for loop request number -  2 logical_clock -  2
+[133] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - requestCS
+[133] da.examples.lamutex.main.P<P:54403>:OUTPUT: for loop request number -  2 logical_clock -  2
+[133] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - requestCS
+[133] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:54403>:OUTPUT: for loop request number -  3 logical_clock -  3
+[134] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - requestCS
+[134] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - request
+[134] da.examples.lamutex.main.P<P:54402>:OUTPUT: for loop request number -  3 logical_clock -  5
+[135] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - requestCS
+[135] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - request
+[136] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - request
+[136] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - request
+[137] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[138] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - request
+[138] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - request
+[139] da.examples.lamutex.main.P<P:54402>:OUTPUT: in cs
+[139] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - releaseCS
+[140] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - release
+[140] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[140] da.examples.lamutex.main.P<P:54403>:OUTPUT: in cs
+[140] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - releaseCS
+[141] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[141] da.examples.lamutex.main.P<P:54403>:OUTPUT: in cs
+[141] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - releaseCS
+[141] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - release
+[141] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[142] da.examples.lamutex.main.P<P:54402>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - task *** corresponding to logical_clock - 2
+[142] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - releaseCS
+[142] da.examples.lamutex.main.P<P:54403>:OUTPUT: in cs
+[142] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - releaseCS
+[142] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - task *** corresponding to logical_clock - 3
+[142] da.examples.lamutex.main.P<P:54403>:OUTPUT: in cs
+[143] da.examples.lamutex.main.P<P:54403>:OUTPUT: helper function - releaseCS
+[143] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - release
+[143] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - task *** corresponding to logical_clock - 2
+[144] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - release
+[144] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - release
+[144] da.examples.lamutex.main.P<P:54402>:OUTPUT: in cs
+[144] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - releaseCS
+[144] da.examples.lamutex.main.P<P:54402>:OUTPUT: handler function receive - release
+[145] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - task *** corresponding to logical_clock - 5
+[145] da.examples.lamutex.main.P<P:54402>:OUTPUT: in cs
+[145] da.examples.lamutex.main.P<P:54402>:OUTPUT: helper function - releaseCS
+[145] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - release
+[146] da.examples.lamutex.main.P<P:54403>:OUTPUT: handler function receive - release
+[147] da.examples.lamutex.main.P<P:54402>:OUTPUT: terminating
+[147] da.examples.lamutex.main.P<P:54403>:OUTPUT: terminating
+[147] da.api<MainProcess>:INFO: Main process terminated.
+
+# govind at Govindraos-MacBook-Air.local in ~/work/distalgo on git:ak_develop ✖︎ [15:16:41]
+→ python -m da -m da.examples.lamutex.main 3 4
+[69] da.api<MainProcess>:INFO: <Node_:75401> initialized at 127.0.0.1:(UdpTransport=35411, TcpTransport=48157).
+[69] da.api<MainProcess>:INFO: Starting program <module 'da.examples.lamutex.main' from '/Users/govind/work/distalgo/da/examples/lamutex/main.da'>...
+[69] da.api<MainProcess>:INFO: Running iteration 1 ...
+[71] da.api<MainProcess>:INFO: Waiting for remaining child processes to terminate...(Press "Ctrl-C" to force kill)
+[73] da.examples.lamutex.main.Node_<Node_:75401>:OUTPUT: main function - *****************************************************************
+[148] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - run
+[148] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - run
+[148] da.examples.lamutex.main.P<P:4d802>:OUTPUT: for loop request number -  0 logical_clock -  0
+[148] da.examples.lamutex.main.P<P:4d803>:OUTPUT: for loop request number -  0 logical_clock -  0
+[148] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - requestCS
+[148] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - requestCS
+[148] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - run
+[148] da.examples.lamutex.main.P<P:4d804>:OUTPUT: for loop request number -  0 logical_clock -  0
+[149] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - requestCS
+[152] da.examples.lamutex.main.P<P:4d804>:OUTPUT: for loop request number -  1 logical_clock -  1
+[152] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - requestCS
+[152] da.examples.lamutex.main.P<P:4d802>:OUTPUT: for loop request number -  1 logical_clock -  1
+[152] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - requestCS
+[153] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[153] da.examples.lamutex.main.P<P:4d803>:OUTPUT: for loop request number -  1 logical_clock -  1
+[153] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - requestCS
+[154] da.examples.lamutex.main.P<P:4d804>:OUTPUT: for loop request number -  2 logical_clock -  2
+[154] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[154] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - requestCS
+[154] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[154] da.examples.lamutex.main.P<P:4d802>:OUTPUT: for loop request number -  2 logical_clock -  4
+[155] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - requestCS
+[155] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[155] da.examples.lamutex.main.P<P:4d803>:OUTPUT: for loop request number -  2 logical_clock -  4
+[155] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - requestCS
+[156] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[156] da.examples.lamutex.main.P<P:4d804>:OUTPUT: for loop request number -  3 logical_clock -  5
+[156] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - requestCS
+[157] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[157] da.examples.lamutex.main.P<P:4d803>:OUTPUT: for loop request number -  3 logical_clock -  7
+[157] da.examples.lamutex.main.P<P:4d802>:OUTPUT: for loop request number -  3 logical_clock -  7
+[157] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - requestCS
+[157] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - requestCS
+[158] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[158] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[159] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[159] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[159] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[160] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[160] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[160] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[160] da.examples.lamutex.main.P<P:4d802>:OUTPUT: in cs
+[160] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - releaseCS
+[161] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[161] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[161] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[161] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[162] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[162] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[163] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[163] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - request
+[163] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[164] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - request
+[164] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - request
+[164] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[165] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[165] da.examples.lamutex.main.P<P:4d803>:OUTPUT: in cs
+[165] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - releaseCS
+[165] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[166] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[166] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[167] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - task *** corresponding to logical_clock - 0
+[167] da.examples.lamutex.main.P<P:4d804>:OUTPUT: in cs
+[167] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - releaseCS
+[168] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[168] da.examples.lamutex.main.P<P:4d804>:OUTPUT: in cs
+[168] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - releaseCS
+[168] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[168] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[168] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[168] da.examples.lamutex.main.P<P:4d802>:OUTPUT: in cs
+[168] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - task *** corresponding to logical_clock - 1
+[168] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - releaseCS
+[168] da.examples.lamutex.main.P<P:4d803>:OUTPUT: in cs
+[168] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - releaseCS
+[169] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - task *** corresponding to logical_clock - 2
+[169] da.examples.lamutex.main.P<P:4d804>:OUTPUT: in cs
+[169] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - task *** corresponding to logical_clock - 4
+[169] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - task *** corresponding to logical_clock - 4
+[169] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - releaseCS
+[169] da.examples.lamutex.main.P<P:4d802>:OUTPUT: in cs
+[170] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - releaseCS
+[170] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[170] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[170] da.examples.lamutex.main.P<P:4d803>:OUTPUT: in cs
+[170] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - releaseCS
+[170] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[171] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[171] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[171] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - task *** corresponding to logical_clock - 5
+[171] da.examples.lamutex.main.P<P:4d804>:OUTPUT: in cs
+[171] da.examples.lamutex.main.P<P:4d804>:OUTPUT: helper function - releaseCS
+[171] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - task *** corresponding to logical_clock - 7
+[171] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[171] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - task *** corresponding to logical_clock - 7
+[172] da.examples.lamutex.main.P<P:4d803>:OUTPUT: in cs
+[172] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[172] da.examples.lamutex.main.P<P:4d803>:OUTPUT: helper function - releaseCS
+[172] da.examples.lamutex.main.P<P:4d802>:OUTPUT: in cs
+[172] da.examples.lamutex.main.P<P:4d802>:OUTPUT: helper function - releaseCS
+[172] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[173] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[173] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[173] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[173] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d803>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d804>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[174] da.examples.lamutex.main.P<P:4d802>:OUTPUT: handler function receive - release
+[175] da.examples.lamutex.main.P<P:4d802>:OUTPUT: terminating
+[175] da.examples.lamutex.main.P<P:4d803>:OUTPUT: terminating
+[175] da.examples.lamutex.main.P<P:4d804>:OUTPUT: terminating
+[175] da.api<MainProcess>:INFO: Main process terminated.
+
+
+
